@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<p id="demo"></p>
+<form>
+    <label>Select a Country:</label>
+    <select id="selectCountry">
+        <option></option>
+    </select>
+    <button onclick="catchStates();return false">SUBMIT</button>
+</form><br>
+<form>
+    <label>Select a State:</label>
+    <select id="selectState">
+        <option></option>
+    </select>
+    <button onclick="catchCities();return false">SUBMIT</button>
+</form><br>
+<form>
+    <label>Select a City:</label>
+    <select id="selectCity">
+        <option></option>
+    </select>
+    <button onclick="showData();return false">SUBMIT</button>
+</form><br>
+<form>
+    <option>
+        <select></select>
+    </option>
+</form>
+
+    <ul><li>Start you search by Country:</li>
+        <li>Narrow it to a State:</li>
+        <li>Narrow it to a City:</li>
+        <li>Nearest City to you</li>
+    </ul>
+        <button onclick="getLocation()">CLICK</button>
+
+<script src="index.js"></script>
+</body>
+</html>
+
+<!-- 
+    {status: "success", data: {…}}
+data:
+city: "Indianapolis"
+country: "USA"
+current:pollution:
+aqicn: 5 chinese
+aqius: 16 // 
+maincn: "p2" chinese
+mainus: "p2" //main pollutant for US AQI
+ts: "2020-09-30T03:00:00.000Z" TIMESTAMP
+
+current:weather:
+hu: 66 //humidity %
+ic: "04n" //weather icon code / .png
+pr: 1011 //atmospheric pressure in hPa
+tp: 10 //temperature in Celsius
+ts: "2020-09-30T03:00:00.000Z" TIMESTAMP
+wd: 260 //wind direction, as an angle of 360° (N=0, E=90, S=180, W=270)
+ws: 2.6 //wind speed (m/s)
+
+location:coordinates: Array(2)
+0: -86.2147
+1: 39.7889
+
+ -->
